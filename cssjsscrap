@@ -1,0 +1,11 @@
+// css scrap
+
+var sts = document.styleSheets;
+var result = [];
+for (var i = 0; i < sts.length; i++) {
+    var st = sts.item(i);
+    if (st && st.href) {
+       result.push(st.href.match(/\w*\.css/));
+    }
+}
+console.dir(result);
